@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────
+# Virtual Fashion Fitting Room — Full dependency list
+# Python 3.10 recommended
+# ─────────────────────────────────────────────────────────────
+
+# ── Core scientific stack ─────────────────────────────────────
+numpy>=1.23.0
+scipy>=1.10.0
+Pillow>=9.4.0
+matplotlib>=3.7.0
+scikit-image>=0.20.0       # SSIM evaluation metric
+scikit-learn>=1.2.0        # utilities
+
+# ── Computer vision ───────────────────────────────────────────
+opencv-python>=4.7.0       # image I/O, drawing, morphology
+mediapipe>=0.10.0          # pose estimation (Module 1)
+
+# ── Deep learning (PyTorch) ───────────────────────────────────
+# CPU-only install — swap the index URL below for GPU
+# GPU (CUDA 11.8): https://download.pytorch.org/whl/cu118
+# GPU (CUDA 12.1): https://download.pytorch.org/whl/cu121
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ── GAN / generative models ───────────────────────────────────
+kornia>=0.6.12             # differentiable image transforms, TPS warping
+einops>=0.6.1              # tensor rearrangement (used in attention layers)
+
+# ── Segmentation ─────────────────────────────────────────────
+# SAM (Segment Anything) — for body/garment segmentation
+segment-anything>=1.0      # pip install git+https://github.com/facebookresearch/segment-anything.git
+
+# ── Evaluation metrics ────────────────────────────────────────
+lpips>=0.1.4               # perceptual similarity (LPIPS)
+pytorch-fid>=0.3.0         # FID score
+
+# ── Data handling ─────────────────────────────────────────────
+tqdm>=4.65.0               # progress bars
+pandas>=2.0.0              # tabular results tracking
+h5py>=3.8.0                # storing large heatmap arrays efficiently
+
+# ── Experiment tracking ───────────────────────────────────────
+tensorboard>=2.13.0        # loss curves during training
+
+# ── Jupyter ───────────────────────────────────────────────────
+jupyter>=1.0.0
+ipykernel>=6.22.0
+ipywidgets>=8.0.0          # interactive widgets in notebooks
+
+# ── API / demo (Module 5) ─────────────────────────────────────
+flask>=3.0.0               # REST API for mobile demo
+flask-cors>=4.0.0          # allow phone to call local API

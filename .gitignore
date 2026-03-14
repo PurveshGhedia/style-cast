@@ -1,0 +1,72 @@
+# ─────────────────────────────────────────────────────────────
+# Virtual Fashion Try-On — .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# ── Model checkpoints (too large for git) ────────────────────
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+
+# ── Dataset (never commit raw data) ──────────────────────────
+data/
+
+# ── Generated outputs ─────────────────────────────────────────
+outputs/
+
+# ── HuggingFace model cache ───────────────────────────────────
+.cache/
+~/.cache/huggingface/
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# ── Jupyter ───────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── Virtual environments ──────────────────────────────────────
+vfr-env/
+venv/
+env/
+.env
+*.env
+
+# ── macOS ─────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ── IDEs ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Logs and temp files ───────────────────────────────────────
+logs/
+runs/
+*.log
+tmp/
+temp/
+
+# ── Large image files (test inputs) ───────────────────────────
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.mov
+
+# ── NumPy arrays ──────────────────────────────────────────────
+*.npy
+*.npz
